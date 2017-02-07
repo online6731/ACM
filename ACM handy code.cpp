@@ -95,3 +95,18 @@ long double horner_function(int n, double coefficients[], double x) {
     return y;
 }
 /********************************************************/
+
+/******************** DecimalToBinary *******************/
+// This function get number n and return it's binary form in string
+// Time complexity : O(log(n))
+
+string DecimalToBinary (int n){
+    string code = "";
+    do {
+        code.push_back(n % 2 + '0');
+    } while (n /= 2);
+    reverse(code.begin(), code.end());
+    return code;
+}
+/********************************************************/
+
